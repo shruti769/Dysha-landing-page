@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
                                     key={i}
                                     className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full"
                                     style={{
-                                        top: `${i * 20}px`,
+                                        top: `${i * 240}px`,
                                         background: "linear-gradient(180deg, #DDAB52 0%, #FDDE6E 100%)"
                                     }}
                                 />
