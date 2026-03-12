@@ -594,7 +594,7 @@ const ServicesSection = () => {
 
 
             {/* -------------------Service 12-------------------- */}
-            <div className="max-w-7xl mt-20 mx-auto px-6 flex flex-col-reverse md:flex-row gap-20 items-center justify-center">
+            <div className="max-w-7xl mt-20 mx-auto px-6 flex flex-col md:flex-row gap-20 items-center justify-center">
 
 
 
