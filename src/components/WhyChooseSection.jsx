@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
 
             <div className="max-w-6xl mx-auto pt-10">
 
-               <div className="grid grid-cols-[8%_92%] md:grid-cols-[42%_16%_42%] lg:grid-cols-[40%_20%_40%] gap-6">
+                <div className="items-center grid grid-cols-[2%_98%] md:grid-cols-[42%_16%_42%] lg:grid-cols-[40%_20%_40%] gap-0 md:gap-6">
 
                     {/* LEFT SIDE (desktop only) */}
                     <div className="hidden md:block space-y-20 text-left">
@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
                                     {item.title}
                                 </h3>
 
-                                <p className="text-black max-w-xs mb-6" style={{ fontFamily: "Inknut Antiqua", lineHeight: "1.7em" }}>
+                                <p className="text-black text-[16px] sm:text-[18px]  mb-10" style={{ fontFamily: "Inknut Antiqua", lineHeight: "1.7em" }}>
                                     {item.desc}
                                 </p>
 
@@ -69,14 +69,14 @@ const WhyChooseUs = () => {
 
                     {/* CENTER TIMELINE */}
                     <div className="flex md:justify-center">
-                        <div className="w-[2px] relative bg-[#FDDE6E] min-h-[1200px]">
+                        <div className="w-[2px] relative bg-[#FDDE6E] min-h-[1600px] md:min-h-[1100px]">
 
                             {[...Array(6)].map((_, i) => (
                                 <span
                                     key={i}
                                     className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full"
                                     style={{
-                                        top: `${i * 240}px`,
+                                        top: `${window.innerWidth < 768 ? i * 320 : i * 220}px`,
                                         background: "linear-gradient(180deg, #DDAB52 0%, #FDDE6E 100%)"
                                     }}
                                 />
@@ -89,16 +89,16 @@ const WhyChooseUs = () => {
                     <div className="space-y-20">
 
                         {/* DESKTOP RIGHT */}
-                       <div className="hidden md:block text-right space-y-20 pr-4">
+                        <div className="hidden md:block text-right space-y-20 pr-4">
                             {rightFeatures.map((item, i) => (
                                 <div key={i}>
-                                    <img src={item.icon} className="w-28 mx-auto mb-6" alt={item.title} />
+                                    <img src={item.icon} className="w-28 mx-auto mb-10" alt={item.title} />
 
                                     <h3 className="font-bold text-[24px] mb-4" style={{ fontFamily: "Inknut Antiqua" }}>
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-black text-[20px]" style={{ fontFamily: "Inknut Antiqua", lineHeight: "1.7em" }}>
+                                    <p className="text-black text-[18px]" style={{ fontFamily: "Inknut Antiqua", lineHeight: "1.7em" }}>
                                         {item.desc}
                                     </p>
                                 </div>
@@ -110,7 +110,7 @@ const WhyChooseUs = () => {
                             {[...leftFeatures, ...rightFeatures].map((item, i) => (
                                 <div key={i} className="">
 
-                                    <img src={item.icon}  className="w-20 mb-4 object-contain border-0 bg-transparent" alt={item.title} />
+                                    <img src={item.icon} className="w-20 mb-4 object-contain border-0 bg-transparent" alt={item.title} />
 
                                     <h3 className="font-bold text-[20px] mb-3" style={{ fontFamily: "Inknut Antiqua" }}>
                                         {item.title}
